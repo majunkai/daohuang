@@ -848,12 +848,12 @@ window.Win10 = {
             closeBtn: 1, //不显示关闭按钮
             anim: 2,
             skin: 'layui-layer-molv',
-            title: '千纸鹤博客 '+this._version,
+            title: '10o.tw博客 '+this._version,
             shadeClose: true, //开启遮罩关闭
             area: ['320px', '200px'], //宽高
             content: '<div style="padding: 10px;font-size: 12px">' +
-            '<p>千纸鹤©版权所有</p>' +
-            '<p>邮箱:3167916867@QQ.com</p>' +
+            '<p>本页©版权所有</p>' +
+            '<p>邮箱:2239787979@QQ.com</p>' +
             '</div>'
         });
     },
