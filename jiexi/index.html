@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="never">
+    <meta http-equiv="Cache-Control" content="no-transform"> 
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=520, initial-scale=1, maximum-scale=1, user-scalable=yes">
+    <title>VIP解析</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="https://www.1800.ooo/favicon.ico">
+</head>
+<style type="text/css">
+body { background-image: url(http://7xt339.com1.z0.glb.clouddn.com/%E5%8A%A8%E6%BC%AB%E5%A3%81%E7%BA%B81.jpg);
+background-position: left top;  background-attachment:fixed; background-repeat:no-repeat}
+</style>
+
+<body>
+    <div id="main">
+        <div class="header clearfix">
+            <h1><a href="/">—— VIP解析 ——</a></h1>
+            <p style="font-size:18px">→ <a href="http://10o.tw/" target="_blank">首页</a> ←</p>
+        </div>
+            <div id="menu">
+            <ul id="playpanel" class="list tip clearfix">
+                <select id="api"></select>
+                <input id="url" type="text" placeholder="输入完整视频网址，包含：http://">
+                <button id="play" onclick="play();">点击播放</button>
+            </ul>         
+        </div>
+        <div class="header cats"><h2>输入视频地址，即享免VIP播放，点击〔<a href="https://greasyfork.org/zh-CN/scripts/45337-%E5%A8%81%E6%AD%A6vip%E8%A7%A3%E6%9E%90" target="_blank">使用脚本</a>〕快捷直达</h2></div>
+        <ul id="player" class="list table">
+            <div class="body">
+                <p>输入视频地址</p>
+                <p>如当前热播的金蝉脱壳2</p>
+                <p>https://v.qq.com/x/cover/sdh5hiwzkterio0.html</p>
+                <p>点击播放，即可</p>
+                <p>不保证接口实时可用</p>
+                <p>播放失败请多点几次播放，或切换接口</p>
+                <p>选择备用线路可能会安全提示</p>
+                <p>此网页正试图从未经验证的来源加载脚本</p>
+                <p>需允许加载不安全的脚本</p>
+                <p>http://10o.tw/</p>
+            </div>
+        </ul>
+		
+           <a href="http://10o.tw/" target="_blank">
+		   <img src="https://i.loli.net/2018/11/13/5be9d6f8622ee.png" style="margin:0;padding:0;display:block">
+		   </a>
+		   
+        <div id="foot">
+            <div class="header footer">
+                <h3>—— 提 示 牌 ——</h3>
+                <p><span>解析接口收集自互联网，仅供学习交流，请勿用于商业</span></p>
+                <p>
+                    <a href="http://10o.tw/" target="_blank">首页</a> / 
+                    <a href="http://10o.tw/" target="_blank">首页</a> / 
+                    <a href="http://10o.tw/" target="_blank">首页</a> / 
+                    <a href="http://10o.tw/" target="_blank">首页</a> / 
+                     <!--<a href="http://10o.tw/" target="_blank">账号之家</a>-->
+                </p>
+            </div>            
+        </div>
+    </div>
+    <script>
+        var data = [
+                {name:"线 路 一",url:"https://jx.618g.com/?url="},
+                {name:"线 路 二",url:"https://kx28.com/vip/index.php?url="},
+                {name:"线 路 三",url:"https://jqaaa.com/jx.php?url="},
+                {name:"线 路 四",url:"https://api.pangujiexi.com/player.php?url="},
+                {name:"线 路 五",url:"https://jiexi.071811.cc/jx2.php?url="},
+                {name:"线 路 六",url:"https://ejiafarm.com/dy/jiexi.php?url="},
+                {name:"线 路 七",url:"https://beaacc.com/api.php?url="},
+                {name:"线 路 八",url:"https://api.fastflv.cc/jiexi/?url="},
+                {name:"线 路 九",url:"https://j.88gc.net/jx/?url="},
+                {name:"备用线路",url:"http://yun.baiyug.cn/vip/index.php?url="},
+                ];
+        for (var i in  data){
+            var opt = document.createElement ("option");
+            opt.value = data[i].url;
+            opt.innerText = data[i].name;
+            document.getElementById("api").appendChild (opt);
+        }
+        function play(){
+            var url = document.getElementById("url").value;
+            if(url.indexOf('http') == -1){  
+                alert('视频地址不正确！');return;
+            }
+            var api = document.getElementById("api").value;
+            url = api + url;
+            document.getElementById("player").innerHTML='<iframe marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" allowfullscreen="true" scrolling="no" height="100%" width="100%" src="'+url+'"></iframe>';
+        }
+    </script>
+
+</body>
+</html>
